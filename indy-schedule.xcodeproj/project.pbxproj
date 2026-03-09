@@ -6,133 +6,270 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		098312669065FA0F3FC450F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51AF3F58C86636F1FB552D /* ContentView.swift */; };
+		197FDFF77F8D23DA82C55438 /* RaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A53F4E7CBE5BED984880F89 /* RaceStore.swift */; };
+		1FAF8ACD8BDB9C25C55F9A43 /* IndyScheduleWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4CAB418DE1AEE7D7C5FA6979 /* IndyScheduleWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4D71398E3B22E1EBD8FFE24A /* races.json in Resources */ = {isa = PBXBuildFile; fileRef = DBACACCC22FFDCF09A06FA2F /* races.json */; };
+		5AE223C89D6C8E4984D13F2C /* indy_scheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E13A5B7EEF9A6F686F2FB8 /* indy_scheduleApp.swift */; };
+		61C4F8C1EBCE9809E429728F /* IndyScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B061915B1CF85CCEE00B9 /* IndyScheduleWidget.swift */; };
+		67EA908207DDE0EC0B24886C /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611BE403CDACC2FF0867962 /* Race.swift */; };
+		6E46F7AA6226D4CF1981C3C5 /* RaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A53F4E7CBE5BED984880F89 /* RaceStore.swift */; };
+		7986802472FD6C194EBD2DA7 /* RaceFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267831C56FC1FDD116431B4A /* RaceFormatting.swift */; };
+		8AE1EFA4EA6AD564710D3C4A /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611BE403CDACC2FF0867962 /* Race.swift */; };
+		9EFBC94E276C67AE8A043297 /* races.json in Resources */ = {isa = PBXBuildFile; fileRef = DBACACCC22FFDCF09A06FA2F /* races.json */; };
+		A1AD9479F6E0874A7B36E26E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883160C46DB32081A218C3CF /* Assets.xcassets */; };
+		AE46362C9FA771867D2CD8EA /* RaceFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267831C56FC1FDD116431B4A /* RaceFormatting.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAC88541FE5DFA258D1779C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0024A7AE17F638E12B6B79B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 539CFFB9E366829774DA46F5;
+			remoteInfo = IndyScheduleWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D5BD43B83FBA9CC00AD755A7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1FAF8ACD8BDB9C25C55F9A43 /* IndyScheduleWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		CA1334362F55A3AA00257F8F /* indy-schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "indy-schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		267831C56FC1FDD116431B4A /* RaceFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceFormatting.swift; sourceTree = "<group>"; };
+		2B79850C1592C894A3EDA591 /* indy-schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "indy-schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CAB418DE1AEE7D7C5FA6979 /* IndyScheduleWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IndyScheduleWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F1B061915B1CF85CCEE00B9 /* IndyScheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndyScheduleWidget.swift; sourceTree = "<group>"; };
+		7A53F4E7CBE5BED984880F89 /* RaceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceStore.swift; sourceTree = "<group>"; };
+		883160C46DB32081A218C3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9619B5116E0624B72826BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B1E13A5B7EEF9A6F686F2FB8 /* indy_scheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = indy_scheduleApp.swift; sourceTree = "<group>"; };
+		BC51AF3F58C86636F1FB552D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C611BE403CDACC2FF0867962 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		DBACACCC22FFDCF09A06FA2F /* races.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = races.json; sourceTree = "<group>"; };
+		F8CEBEF9CFEBB8B42FF5C43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		CA1334382F55A3AA00257F8F /* indy-schedule */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
+/* Begin PBXGroup section */
+		24AA311E824C20798931E59E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E40F7DFDFE5506D8DC7BA457 /* Data */,
+				446D15C4BE1C06C0F174A144 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		446D15C4BE1C06C0F174A144 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C611BE403CDACC2FF0867962 /* Race.swift */,
+				267831C56FC1FDD116431B4A /* RaceFormatting.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6170EC989D7F0B7ED8352221 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B79850C1592C894A3EDA591 /* indy-schedule.app */,
+				4CAB418DE1AEE7D7C5FA6979 /* IndyScheduleWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8ABF0F8914FC86AE928E5DDD /* indy-schedule */ = {
+			isa = PBXGroup;
+			children = (
+				883160C46DB32081A218C3CF /* Assets.xcassets */,
+				BC51AF3F58C86636F1FB552D /* ContentView.swift */,
+				B1E13A5B7EEF9A6F686F2FB8 /* indy_scheduleApp.swift */,
+				A9619B5116E0624B72826BCD /* Info.plist */,
+			);
 			path = "indy-schedule";
 			sourceTree = "<group>";
 		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		CA1334332F55A3AA00257F8F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		CA13342D2F55A3AA00257F8F = {
+		B0997852DC201162588515C2 /* IndyScheduleWidget */ = {
 			isa = PBXGroup;
 			children = (
-				CA1334382F55A3AA00257F8F /* indy-schedule */,
-				CA1334372F55A3AA00257F8F /* Products */,
+				6F1B061915B1CF85CCEE00B9 /* IndyScheduleWidget.swift */,
+				F8CEBEF9CFEBB8B42FF5C43C /* Info.plist */,
+			);
+			path = IndyScheduleWidget;
+			sourceTree = "<group>";
+		};
+		D1FAEFF072BE664DBC84CA53 = {
+			isa = PBXGroup;
+			children = (
+				8ABF0F8914FC86AE928E5DDD /* indy-schedule */,
+				B0997852DC201162588515C2 /* IndyScheduleWidget */,
+				24AA311E824C20798931E59E /* Shared */,
+				6170EC989D7F0B7ED8352221 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CA1334372F55A3AA00257F8F /* Products */ = {
+		E40F7DFDFE5506D8DC7BA457 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				CA1334362F55A3AA00257F8F /* indy-schedule.app */,
+				DBACACCC22FFDCF09A06FA2F /* races.json */,
+				7A53F4E7CBE5BED984880F89 /* RaceStore.swift */,
 			);
-			name = Products;
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CA1334352F55A3AA00257F8F /* indy-schedule */ = {
+		539CFFB9E366829774DA46F5 /* IndyScheduleWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA1334412F55A3AC00257F8F /* Build configuration list for PBXNativeTarget "indy-schedule" */;
+			buildConfigurationList = 64B4C6E4475EFC2FE8C7D395 /* Build configuration list for PBXNativeTarget "IndyScheduleWidgetExtension" */;
 			buildPhases = (
-				CA1334322F55A3AA00257F8F /* Sources */,
-				CA1334332F55A3AA00257F8F /* Frameworks */,
-				CA1334342F55A3AA00257F8F /* Resources */,
+				D15024A06F94EC8714E96B0D /* Sources */,
+				DDCB208591C06CF3826F071A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				CA1334382F55A3AA00257F8F /* indy-schedule */,
+			name = IndyScheduleWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = IndyScheduleWidgetExtension;
+			productReference = 4CAB418DE1AEE7D7C5FA6979 /* IndyScheduleWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A5BAC6978CB3A3638F858E6C /* indy-schedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 620DEE5748AEA2E04A3565BB /* Build configuration list for PBXNativeTarget "indy-schedule" */;
+			buildPhases = (
+				407602B7BFC4530D58312149 /* Sources */,
+				165065E8FED16DF14287BA89 /* Resources */,
+				D5BD43B83FBA9CC00AD755A7 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				727F4D2D8297B154F4E2A1F4 /* PBXTargetDependency */,
 			);
 			name = "indy-schedule";
 			packageProductDependencies = (
 			);
 			productName = "indy-schedule";
-			productReference = CA1334362F55A3AA00257F8F /* indy-schedule.app */;
+			productReference = 2B79850C1592C894A3EDA591 /* indy-schedule.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CA13342E2F55A3AA00257F8F /* Project object */ = {
+		0024A7AE17F638E12B6B79B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2630;
-				LastUpgradeCheck = 2630;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
-					CA1334352F55A3AA00257F8F = {
-						CreatedOnToolsVersion = 26.3;
+					539CFFB9E366829774DA46F5 = {
+						ProvisioningStyle = Automatic;
+					};
+					A5BAC6978CB3A3638F858E6C = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = CA1334312F55A3AA00257F8F /* Build configuration list for PBXProject "indy-schedule" */;
+			buildConfigurationList = 1868284D8914C12612D7AB95 /* Build configuration list for PBXProject "indy-schedule" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = CA13342D2F55A3AA00257F8F;
+			mainGroup = D1FAEFF072BE664DBC84CA53;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = CA1334372F55A3AA00257F8F /* Products */;
+			productRefGroup = 6170EC989D7F0B7ED8352221 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CA1334352F55A3AA00257F8F /* indy-schedule */,
+				539CFFB9E366829774DA46F5 /* IndyScheduleWidgetExtension */,
+				A5BAC6978CB3A3638F858E6C /* indy-schedule */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CA1334342F55A3AA00257F8F /* Resources */ = {
+		165065E8FED16DF14287BA89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AD9479F6E0874A7B36E26E /* Assets.xcassets in Resources */,
+				9EFBC94E276C67AE8A043297 /* races.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCB208591C06CF3826F071A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D71398E3B22E1EBD8FFE24A /* races.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CA1334322F55A3AA00257F8F /* Sources */ = {
+		407602B7BFC4530D58312149 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098312669065FA0F3FC450F3 /* ContentView.swift in Sources */,
+				67EA908207DDE0EC0B24886C /* Race.swift in Sources */,
+				AE46362C9FA771867D2CD8EA /* RaceFormatting.swift in Sources */,
+				197FDFF77F8D23DA82C55438 /* RaceStore.swift in Sources */,
+				5AE223C89D6C8E4984D13F2C /* indy_scheduleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D15024A06F94EC8714E96B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61C4F8C1EBCE9809E429728F /* IndyScheduleWidget.swift in Sources */,
+				8AE1EFA4EA6AD564710D3C4A /* Race.swift in Sources */,
+				7986802472FD6C194EBD2DA7 /* RaceFormatting.swift in Sources */,
+				6E46F7AA6226D4CF1981C3C5 /* RaceStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		727F4D2D8297B154F4E2A1F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 539CFFB9E366829774DA46F5 /* IndyScheduleWidgetExtension */;
+			targetProxy = FAC88541FE5DFA258D1779C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		CA13343F2F55A3AC00257F8F /* Debug */ = {
+		0C3C6C594B7A7C40714C3CC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -162,14 +299,13 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -178,24 +314,102 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		CA1334402F55A3AC00257F8F /* Release */ = {
+		50BC3C8AAB5F9CBBF08DCDC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "indy-schedule/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.junqueira.indy-schedule";
+				PRODUCT_NAME = "indy-schedule";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8830B7FF1E8572282AA5B895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = IndyScheduleWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.junqueira.indy-schedule.widget";
+				PRODUCT_MODULE_NAME = IndyScheduleWidgetExtension;
+				PRODUCT_NAME = IndyScheduleWidgetExtension;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B3C4EA938C2D1E5CA7E141F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = IndyScheduleWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.junqueira.indy-schedule.widget";
+				PRODUCT_MODULE_NAME = IndyScheduleWidgetExtension;
+				PRODUCT_NAME = IndyScheduleWidgetExtension;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B86CD023C0666EE143F5E2B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -225,7 +439,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -235,15 +448,21 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		CA1334422F55A3AC00257F8F /* Debug */ = {
+		C2D0C8A1C7CDE664BAC48C71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -254,77 +473,50 @@
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "indy-schedule/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.junqueira.indy-schedule";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				PRODUCT_NAME = "indy-schedule";
+				SDKROOT = macosx;
 			};
 			name = Debug;
-		};
-		CA1334432F55A3AC00257F8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.junqueira.indy-schedule";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CA1334312F55A3AA00257F8F /* Build configuration list for PBXProject "indy-schedule" */ = {
+		1868284D8914C12612D7AB95 /* Build configuration list for PBXProject "indy-schedule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CA13343F2F55A3AC00257F8F /* Debug */,
-				CA1334402F55A3AC00257F8F /* Release */,
+				0C3C6C594B7A7C40714C3CC9 /* Debug */,
+				B86CD023C0666EE143F5E2B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		CA1334412F55A3AC00257F8F /* Build configuration list for PBXNativeTarget "indy-schedule" */ = {
+		620DEE5748AEA2E04A3565BB /* Build configuration list for PBXNativeTarget "indy-schedule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CA1334422F55A3AC00257F8F /* Debug */,
-				CA1334432F55A3AC00257F8F /* Release */,
+				C2D0C8A1C7CDE664BAC48C71 /* Debug */,
+				50BC3C8AAB5F9CBBF08DCDC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
+		};
+		64B4C6E4475EFC2FE8C7D395 /* Build configuration list for PBXNativeTarget "IndyScheduleWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C4EA938C2D1E5CA7E141F2 /* Debug */,
+				8830B7FF1E8572282AA5B895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CA13342E2F55A3AA00257F8F /* Project object */;
+	rootObject = 0024A7AE17F638E12B6B79B4 /* Project object */;
 }

@@ -1,0 +1,111 @@
+name: indy-schedule
+
+options:
+  createIntermediateGroups: true
+  xcodeVersion: "16.3"
+  deploymentTarget:
+    macOS: "14.0"
+
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+    ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
+    CLANG_ANALYZER_NONNULL: YES
+    CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION: YES_AGGRESSIVE
+    CLANG_ENABLE_MODULES: YES
+    CLANG_ENABLE_OBJC_ARC: YES
+    CLANG_WARN_BOOL_CONVERSION: YES
+    CLANG_WARN_CONSTANT_CONVERSION: YES
+    CLANG_WARN_DIRECT_OBJC_ISA_USAGE: YES_ERROR
+    CLANG_WARN_DOCUMENTATION_COMMENTS: YES
+    CLANG_WARN_EMPTY_BODY: YES
+    CLANG_WARN_ENUM_CONVERSION: YES
+    CLANG_WARN_INT_CONVERSION: YES
+    CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF: YES
+    CLANG_WARN_OBJC_LITERAL_CONVERSION: YES
+    CLANG_WARN_OBJC_ROOT_CLASS: YES_ERROR
+    CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER: YES
+    CLANG_WARN_RANGE_LOOP_ANALYSIS: YES
+    CLANG_WARN_STRICT_PROTOTYPES: YES
+    CLANG_WARN_SUSPICIOUS_MOVE: YES
+    CLANG_WARN_UNGUARDED_AVAILABILITY: YES_AGGRESSIVE
+    CLANG_WARN_UNREACHABLE_CODE: YES
+    GCC_C_LANGUAGE_STANDARD: gnu17
+    GCC_NO_COMMON_BLOCKS: YES
+    GCC_WARN_64_TO_32_BIT_CONVERSION: YES
+    GCC_WARN_ABOUT_RETURN_TYPE: YES_ERROR
+    GCC_WARN_UNDECLARED_SELECTOR: YES
+    GCC_WARN_UNINITIALIZED_AUTOS: YES_AGGRESSIVE
+    GCC_WARN_UNUSED_FUNCTION: YES
+    GCC_WARN_UNUSED_VARIABLE: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    MTL_FAST_MATH: YES
+    SDKROOT: macosx
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY: YES
+
+targets:
+  indy-schedule:
+    type: application
+    platform: macOS
+    sources:
+      - path: indy-schedule
+      - path: Shared/Models
+      - path: Shared/Data/RaceStore.swift
+      - path: Shared/Data/races.json
+        buildPhase: resources
+    dependencies:
+      - target: IndyScheduleWidgetExtension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: br.dev.junqueira.indy-schedule
+        PRODUCT_NAME: indy-schedule
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: indy-schedule/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_APP_SANDBOX: YES
+        ENABLE_PREVIEWS: YES
+        ENABLE_USER_SELECTED_FILES: readonly
+        LD_RUNPATH_SEARCH_PATHS:
+          - $(inherited)
+          - "@executable_path/../Frameworks"
+    info:
+      path: indy-schedule/Info.plist
+      properties:
+        CFBundleDisplayName: Indy Schedule
+        LSApplicationCategoryType: public.app-category.sports
+
+  IndyScheduleWidgetExtension:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: IndyScheduleWidget
+      - path: Shared/Models
+      - path: Shared/Data/RaceStore.swift
+      - path: Shared/Data/races.json
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: br.dev.junqueira.indy-schedule.widget
+        PRODUCT_NAME: IndyScheduleWidgetExtension
+        PRODUCT_MODULE_NAME: IndyScheduleWidgetExtension
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: IndyScheduleWidget/Info.plist
+        APPLICATION_EXTENSION_API_ONLY: YES
+        ENABLE_APP_SANDBOX: YES
+        SKIP_INSTALL: YES
+    info:
+      path: IndyScheduleWidget/Info.plist
+      properties:
+        CFBundleDisplayName: Indy Schedule Widget
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).IndyScheduleWidgetBundle

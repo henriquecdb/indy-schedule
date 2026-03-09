@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct indy_scheduleApp: App {
+struct IndyScheduleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .frame(minWidth: 720, minHeight: 520)
         }
     }
 }
