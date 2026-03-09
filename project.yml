@@ -61,8 +61,8 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: br.dev.junqueira.indy-schedule
         PRODUCT_NAME: indy-schedule
-        CURRENT_PROJECT_VERSION: 1
-        MARKETING_VERSION: 1.0
+        CURRENT_PROJECT_VERSION: 0.1.0
+        MARKETING_VERSION: 0.1.0
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: NO
         INFOPLIST_FILE: indy-schedule/Info.plist
@@ -94,8 +94,8 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: br.dev.junqueira.indy-schedule.widget
         PRODUCT_NAME: IndyScheduleWidgetExtension
         PRODUCT_MODULE_NAME: IndyScheduleWidgetExtension
-        CURRENT_PROJECT_VERSION: 1
-        MARKETING_VERSION: 1.0
+        CURRENT_PROJECT_VERSION: 0.1.0
+        MARKETING_VERSION: 0.1.0
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: NO
         INFOPLIST_FILE: IndyScheduleWidget/Info.plist

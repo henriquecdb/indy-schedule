@@ -1,0 +1,39 @@
+name: Release App & Update Cask
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build-and-release:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Compilar o App (Swift/Xcode)
+        run: |
+          xcodebuild -project indy-schedule.xcodeproj -scheme indy-schedule -configuration Release SYMROOT="$(PWD)/build"
+
+      - name: Compactar o App (.zip)
+        run: |
+          cd build/Release
+          zip -r indy-schedule.zip indy-schedule.app
+
+      - name: Criar Release no GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/Release/indy-schedule.zip
+          generate_release_notes: true
+
+      - name: Atualizar o Homebrew Cask
+        uses: mislav/bump-homebrew-formula-action@v3
+        with:
+          formula-name: indy-schedule
+          formula-path: Casks/create-cask.rb
+          homebrew-tap: henriquecdb/homebrew-tap
+          download-url: https://github.com/henriquecdb/indy-schedule/releases/download/${{ github.ref_name }}/indy-schedule.zip
+        env:
+          COMMITTER_TOKEN: ${{ secrets.TAP_GITHUB_TOKEN }}
