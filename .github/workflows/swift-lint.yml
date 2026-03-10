@@ -1,20 +1,20 @@
 name: Swift Quality Check
 
 on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-    lint:
-        runs-on: macos-latest
-        steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v4
+  lint:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-            - name: Resolve Swift Packages
-              run: swift package resolve
+      - name: Resolve Swift Packages
+        run: xcodebuild -resolvePackageDependencies -project indy-schedule.xcodeproj/
 
-            - name: Run SwiftFormat Lint
-              run: swift package plugin swiftformat --lint --strict
+      - name: Run SwiftFormat Lint
+        run: swift package plugin swiftformat --lint --strict
