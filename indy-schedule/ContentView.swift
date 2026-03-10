@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-struct Test{
-var   x : Int
-}
-
 struct ContentView: View {
     private let races = RaceStore.loadRaces()
 
