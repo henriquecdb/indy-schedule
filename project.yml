@@ -80,6 +80,23 @@ targets:
         CFBundleDisplayName: Indy Schedule
         LSApplicationCategoryType: public.app-category.sports
 
+    postBuildScripts:
+      - script: |
+          if which swiftformat >/dev/null; then
+            swiftformat . --swiftversion 6.2 || true
+          else
+            echo "warning: SwiftFormat not installed"
+          fi
+        name: Run SwiftFormat
+      - script: |
+          if which swiftlint >/dev/null; then
+            echo "Rodando SwiftLint..."
+            swiftlint --reporter xcode || true
+          else
+            echo "warning: SwiftLint não instalado via Homebrew."
+          fi
+        name: Run SwiftLint
+
   IndyScheduleWidgetExtension:
     type: app-extension
     platform: macOS
@@ -109,3 +126,11 @@ targets:
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).IndyScheduleWidgetBundle
+
+packages:
+  SwiftFormat:
+    url: https://github.com/nicklockwood/SwiftFormat
+    from: 0.53.0
+  SwiftLint:
+    url: https://github.com/realm/SwiftLint
+    from: 0.63.2

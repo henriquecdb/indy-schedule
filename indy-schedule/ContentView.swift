@@ -7,11 +7,15 @@
 
 import SwiftUI
 
+struct Test{
+var   x : Int
+}
+
 struct ContentView: View {
     private let races = RaceStore.loadRaces()
 
     var body: some View {
-        let nextRace = RaceStore.nextRace(from: races)
+        let nextRace = RaceStore.nextRace(from: self.races)
         let startOfToday = Calendar.current.startOfDay(for: .now)
 
         NavigationStack {
@@ -30,7 +34,7 @@ struct ContentView: View {
                 }
 
                 Section("Calendario 2026") {
-                    ForEach(races) { race in
+                    ForEach(self.races) { race in
                         HStack(alignment: .top, spacing: 12) {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(race.name)

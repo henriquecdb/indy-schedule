@@ -1,0 +1,4 @@
+--indent 4
+--allman false
+--stripunusedargs always
+--self insert

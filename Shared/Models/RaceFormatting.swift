@@ -2,11 +2,11 @@ import Foundation
 
 enum RaceFormatting {
     static func raceDate(_ date: Date) -> String {
-        raceDateFormatter.string(from: date)
+        self.raceDateFormatter.string(from: date)
     }
 
     static func widgetDate(_ date: Date) -> String {
-        widgetDateFormatter.string(from: date)
+        self.widgetDateFormatter.string(from: date)
     }
 
     private static let raceDateFormatter: DateFormatter = {
