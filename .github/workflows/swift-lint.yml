@@ -15,11 +15,6 @@ jobs:
 
       - name: Resolve Swift Packages
         run: xcodebuild -resolvePackageDependencies -project indy-schedule.xcodeproj/
-      - name: Resolve Swift Packages
-        run: xcodebuild -resolvePackageDependencies -project indy-schedule.xcodeproj/
-
-      - name: Resolve Swift Packages
-        run: xcodebuild -resolvePackageDependencies -project indy-schedule.xcodeproj/
 
       - name: Run SwiftFormat Lint
         run: swiftformat . --lint --swiftversion 6.2
