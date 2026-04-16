@@ -27,5 +27,12 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).IndyScheduleWidgetBundle</string>
 	</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>RACES_API_URL</key>
+	<string>https://indy-api.vercel.app/races</string>
 </dict>
 </plist>
