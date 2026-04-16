@@ -235,7 +235,6 @@
 /* Begin PBXShellScriptBuildPhase section */
 		44D7CC620F0FFFD117E28F1F /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -250,11 +249,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\"\n\nif which swiftlint >/dev/null; then\n  echo \"Rodando SwiftLint...\"\n  swiftlint --reporter xcode || true\nelse\n  echo \"warning: SwiftLint não instalado via Homebrew.\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  echo \"Rodando SwiftLint...\"\n  swiftlint --reporter xcode || true\nelse\n  echo \"warning: SwiftLint não instalado via Homebrew.\"\nfi\n";
 		};
 		8F0480B9C3BA4F4B618FA8EA /* Run SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -269,7 +267,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin:/usr/local/bin\"\n\nif which swiftformat >/dev/null; then\n  swiftformat . --swiftversion 6.2 || true\nelse\n  echo \"warning: SwiftFormat not installed\"\nfi\n";
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat . --swiftversion 6.2 || true\nelse\n  echo \"warning: SwiftFormat not installed\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -381,9 +379,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Shared/Config/indy-schedule.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEVELOPMENT_TEAM = APW9GMUGJL;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -404,9 +405,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "Shared/Config/indy-schedule-widget.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEVELOPMENT_TEAM = APW9GMUGJL;
 				ENABLE_APP_SANDBOX = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = IndyScheduleWidget/Info.plist;
@@ -428,9 +432,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "Shared/Config/indy-schedule-widget.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEVELOPMENT_TEAM = APW9GMUGJL;
 				ENABLE_APP_SANDBOX = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = IndyScheduleWidget/Info.plist;
@@ -514,9 +521,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Shared/Config/indy-schedule.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEVELOPMENT_TEAM = APW9GMUGJL;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;

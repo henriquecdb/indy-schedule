@@ -49,6 +49,8 @@ targets:
   indy-schedule:
     type: application
     platform: macOS
+    entitlements:
+      path: Shared/Config/indy-schedule.entitlements
     sources:
       - path: indy-schedule
       - path: Shared/Models
@@ -100,6 +102,8 @@ targets:
   IndyScheduleWidgetExtension:
     type: app-extension
     platform: macOS
+    entitlements:
+      path: Shared/Config/indy-schedule-widget.entitlements
     sources:
       - path: IndyScheduleWidget
       - path: Shared/Models

@@ -22,5 +22,12 @@
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.sports</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>RACES_API_URL</key>
+	<string>https://indy-api.vercel.app/races</string>
 </dict>
 </plist>

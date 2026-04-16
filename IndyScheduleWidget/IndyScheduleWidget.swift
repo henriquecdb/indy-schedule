@@ -15,17 +15,22 @@ struct NextRaceProvider: TimelineProvider {
     }
 
     func getSnapshot(in _: Context, completion: @escaping (NextRaceEntry) -> Void) {
-        completion(self.makeEntry(referenceDate: .now))
+        Task {
+            let entry = await self.makeEntry(referenceDate: .now)
+            completion(entry)
+        }
     }
 
     func getTimeline(in _: Context, completion: @escaping (Timeline<NextRaceEntry>) -> Void) {
-        let entry = self.makeEntry(referenceDate: .now)
-        let refreshDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now)) ?? .now.addingTimeInterval(3600)
-        completion(Timeline(entries: [entry], policy: .after(refreshDate)))
+        Task {
+            let entry = await self.makeEntry(referenceDate: .now)
+            let refreshDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now)) ?? .now.addingTimeInterval(3600)
+            completion(Timeline(entries: [entry], policy: .after(refreshDate)))
+        }
     }
 
-    private func makeEntry(referenceDate: Date) -> NextRaceEntry {
-        let races = RaceStore.loadRaces()
+    private func makeEntry(referenceDate: Date) async -> NextRaceEntry {
+        let races = await RaceStore.loadRacesFromAPI()
         return NextRaceEntry(
             date: referenceDate,
             nextRace: RaceStore.nextRace(from: races, now: referenceDate),
@@ -58,6 +63,12 @@ struct IndyScheduleWidgetEntryView: View {
                 Label(RaceFormatting.widgetDate(race.date), systemImage: "calendar")
                     .font(.subheadline.weight(.medium))
                     .foregroundStyle(self.isFullColor ? .white : .primary)
+
+                if race.hasTime {
+                    Label(RaceFormatting.raceTime(race.time), systemImage: "clock")
+                        .font(.caption)
+                        .foregroundStyle(self.isFullColor ? .white.opacity(0.85) : .secondary)
+                }
             } else {
                 Spacer(minLength: 0)
 
