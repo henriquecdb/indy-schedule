@@ -40,6 +40,8 @@ jobs:
           generate_release_notes: true
 
       - name: Atualizar o Homebrew Cask
+        if: ${{ secrets.TAP_GITHUB_TOKEN != '' }}
+        continue-on-error: true
         uses: mislav/bump-homebrew-formula-action@v3
         with:
           formula-name: indy-schedule
@@ -48,3 +50,8 @@ jobs:
           download-url: https://github.com/henriquecdb/indy-schedule/releases/download/${{ github.ref_name }}/indy-schedule.zip
         env:
           COMMITTER_TOKEN: ${{ secrets.TAP_GITHUB_TOKEN }}
+
+      - name: Aviso sobre TAP_GITHUB_TOKEN
+        if: ${{ secrets.TAP_GITHUB_TOKEN == '' }}
+        run: |
+          echo "TAP_GITHUB_TOKEN não configurado: release criada sem atualizar o Homebrew Cask."

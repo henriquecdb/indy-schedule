@@ -24,7 +24,7 @@ struct NextRaceProvider: TimelineProvider {
     func getTimeline(in _: Context, completion: @escaping (Timeline<NextRaceEntry>) -> Void) {
         Task {
             let entry = await self.makeEntry(referenceDate: .now)
-            let refreshDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now)) ?? .now.addingTimeInterval(3600)
+            let refreshDate = self.nextRefreshDate(from: entry, now: .now)
             completion(Timeline(entries: [entry], policy: .after(refreshDate)))
         }
     }
@@ -35,6 +35,17 @@ struct NextRaceProvider: TimelineProvider {
             date: referenceDate,
             nextRace: RaceStore.nextRace(from: races, now: referenceDate),
         )
+    }
+
+    private func nextRefreshDate(from entry: NextRaceEntry, now: Date) -> Date {
+        if let nextRace = entry.nextRace,
+           let raceDateTime = RaceStore.raceDateTime(for: nextRace),
+           raceDateTime > now
+        {
+            return min(raceDateTime.addingTimeInterval(60), now.addingTimeInterval(3600))
+        }
+
+        return now.addingTimeInterval(3600)
     }
 }
 

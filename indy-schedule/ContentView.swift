@@ -40,7 +40,7 @@ struct ContentView: View {
                             race: race,
                             roundNumber: index + 1,
                             isNext: nextRace?.id == race.id,
-                            isPast: race.date < startOfToday,
+                            isPast: self.isPastRace(race, startOfToday: startOfToday),
                         )
                     }
                 }
@@ -90,6 +90,14 @@ struct ContentView: View {
                 await self.refreshRaces(force: false)
             }
         }
+    }
+
+    private func isPastRace(_ race: Race, startOfToday: Date) -> Bool {
+        if let raceDateTime = RaceStore.raceDateTime(for: race) {
+            return raceDateTime < .now
+        }
+
+        return race.date < startOfToday
     }
 
     private func lastUpdateDescription(relativeTo now: Date) -> String {
